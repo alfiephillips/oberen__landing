@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap");
+
+.container {
+  background-color: black; /* background color */
+  min-height: 100vh; /* cover at least the whole screen */
+  height: 100%;
+  display: flex; /* our flex layout */
+  flex-wrap: wrap;
+  font-family: "'M PLUS Rounded 1c'";
+  color: white;
+}
+.column {
+  flex: 50%; /* each column takes up half the screen */
+  margin: auto; /* vertically align each column */
+  padding: 2rem;
+}
+
+.column img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 3rem;
+  color: white;
+}
+.titleKeyword {
+  color: #8c35fd;
+}
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 250;
+  color: white;
+}
+
+.formWrapper {
+  padding-top: 1rem;
+}
+/* Shared by the input and button so they are the same size and style */
+.formInput {
+  padding: 20px 28px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+.formTextInput {
+  flex: 70%; /* take up most of the available space */
+  background-color: #232323;
+  color: white;
+  width: 400px;
+  margin-right: 10px;
+}
+.formSubmitButton {
+  flex: 30%; /* take up the rest of the space */
+  background-color: #8c35fd;
+  color: white;
+  width: 150px;
+  margin-right: 5px;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.formSubmitButton:hover {
+  background-color: #8c34ea;
+}
+
+.formSubmitButton:disabled {
+  transition: all 0.25s ease-in-out;
+  background-color: #232323;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+}
+
+/* On small screens, we no longer want to have two columns since they
+* would be too small. Increasing it to 100% will make the two columns
+* stack on top of each other */
+
+@media screen and (max-width: 1260px) {
+  .rightImage {
+    display: none;
+  }
+}
